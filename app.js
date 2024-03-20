@@ -1,6 +1,5 @@
-var express = require('express');
-var indexRouter = require('./routes/index.js');
-const { auth } = require('express-openid-connect');
+const express = require('express');
+const { auth, requiresAuth } = require('express-openid-connect');
 
 require('dotenv').config();
 
@@ -13,30 +12,32 @@ const config = {
   issuerBaseURL: process.env.ISSUER_URL
 };
 
-var app = express();
-// app.set('views', 'views');
-// app.set('view engine');
+const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
 // application of middleware
 app.use(auth(config));
 
-
 //add rA to const above with auth ex. { auth, requiresAuth}
 // Chat gpt for prof route reference
-// app.get('/profile', requiresAuth(), (req, res) => {
-//   // Access user information from req.oidc.user
-//   res.json(req.oidc.user);
-// });
-
-
-app.use('/', indexRouter);
-
-app.listen(3000, (err) => {
-  if (err) {
-    console.error('Server failed to start:', err);
-  } else {
-    console.log('Server is running on http://localhost:3000');
-  }
+app.get('/profile', requiresAuth(), (req, res) => {
+  // Access user information from req.oidc.user
+  res.send(JSON.stringify(req.oidc.user));
 });
+
+
+// app.use('/');
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+
