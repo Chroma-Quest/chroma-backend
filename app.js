@@ -22,6 +22,15 @@ app.use(express.urlencoded({ extended: true}));
 // application of middleware
 app.use(auth(config));
 
+
+//add rA to const above with auth ex. { auth, requiresAuth}
+// Chat gpt for prof route reference
+// app.get('/profile', requiresAuth(), (req, res) => {
+//   // Access user information from req.oidc.user
+//   res.json(req.oidc.user);
+// });
+
+
 app.use('/', indexRouter);
 
 app.listen(3000, (err) => {
