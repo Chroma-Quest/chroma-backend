@@ -1,35 +1,43 @@
-# Project Name
+# Chroma Backend
 
-- **Author**: Brock Britton,Ahmed Elnogoumi, Patrick Reveira, Justin Cheeseman, John Gause, Mak Trnka
+- **Authors**: Brock Britton, Ahmed Elnogoumi, Patrick Reveira, Justin Cheeseman, John Gause, Mak Trnka
 - **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
-## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
-- **PLACEHOLDER**:
+## 🚀 Overview
 
-## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
-- **Front-End**: https://github.com/Chroma-Quest/chroma-frontend
-- **Install**: PLACEHOLDER
-- **Set Environment Variables**: .env
-- **Start Server**:
+This repository contains a backend Express server that implements authentication using Auth0. Auth0 is a flexible authentication and authorization platform that allows developers to secure their applications with ease.
 
-## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-- **"cors": "^2.8.5"**
-- **"express": "^4.18.3"**
-- **"mongoose": "^8.2.2"**
+## 🛠️ Getting Started
 
-## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
+To run this application on your machine, follow these steps:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
-- **PLACEHOLDER**:
+- **Front-End**: [Chroma Frontend](https://github.com/Chroma-Quest/chroma-frontend)
+- **Install Dependencies**: Run `npm install` to install the required dependencies.
+- **Set Environment Variables**: Create a `.env` file in the root directory and add the necessary environment variables.
+- **Start Server**: Run `npm start` to start the Express server.
 
-## Estimates
-<!-- See below -->
-- **PLACEHOLDER**:
+## 🏗️ Architecture
 
-## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
-- **PLACEHOLDER**:
+This application is built using the following technologies and libraries:
+
+- **cors**: ^2.8.5
+- **express**: ^4.18.3
+- **mongoose**: ^8.2.2
+- **express-openid-connect**: ^2.17.1
+- **dotenv**: ^16.4.5
+
+## 🔄 Change Log
+
+Stay up-to-date with the latest enhancements and improvements made to this project:
+
+- **PLACEHOLDER**: [Timestamp] - Description of change.
+
+## 🕒 Estimates
+
+Plan your workflow efficiently with accurate time estimates for project completion:
+
+- **PLACEHOLDER**: [Estimated time for completion]
+
+## 🤝 Credit and Collaborations
+
+We extend our heartfelt gratitude to the [Chroma Team](https://github.com/Chroma-Quest) for their invaluable collaboration and unwavering support during the development of this project.
