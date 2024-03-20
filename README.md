@@ -12,13 +12,15 @@
 - **Front-End**: https://github.com/Chroma-Quest/chroma-frontend
 - **Install**: PLACEHOLDER
 - **Set Environment Variables**: .env
-- **Start Server**:
+- **Start Server**: npm start
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 - **"cors": "^2.8.5"**
 - **"express": "^4.18.3"**
 - **"mongoose": "^8.2.2"**
+- **"express-openid-connect": "^2.17.1"**
+- **"dotenv": "^16.4.5"**
 
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
